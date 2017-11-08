@@ -4,24 +4,21 @@ import { BrowserRouter } from 'react-router-dom'
 
 import App from './components/App';
 
-import './styles/main.scss'
-
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import reducers from './reducers';
+import './styles/main.scss';
+import './styles/header.scss';
+import './styles/footer.scss';
+import './styles/home.scss';
+import './styles/about.scss';
+import './styles/reviews.scss';
+import './styles/events.scss';
+import './styles/reservation.scss';
 import registerServiceWorker from './registerServiceWorker';
-
-const createStoreWithMiddleware = applyMiddleware()(createStore);
-
-
 
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
   	<BrowserRouter>
       <App/>
   	</BrowserRouter>
-  </Provider>
   , document.getElementById('root'));
 
 registerServiceWorker();
