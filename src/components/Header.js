@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 const logo= require('../img/logo.jpg')
-
+const menu = require('../img/menu.svg')
 class Header extends React.Component {
  constructor() {
     super();
@@ -17,7 +17,7 @@ class Header extends React.Component {
         <div id="logo">
           <img src={logo} alt="To the nines logo"/> 
         </div>
-        <img id="menu" onClick={this.toggleDropdown} src="" alt="menu"/>
+        <img id="menu" onClick={this.toggleDropdown} src={menu} alt="menu"/>
         <div id="links" className={(this.state.showMenu)? "active" : "" }>
           <NavLink exact to='/' activeClassName="active">Home</NavLink>
           <NavLink to ='/about' activeClassName="active">About us</NavLink>

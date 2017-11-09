@@ -6,17 +6,22 @@
 		  "links links";
   padding-top: 5px	;
 	}
-	
 	#logo{
 		text-align: center;
 		grid-area:logo;
 		img{
-			width:200px;
+			width:250px;
 		}
 	}
 	#menu{
 		grid-area:menu;
 	}
+	img#menu{
+		margin-top:10px;
+		margin-left: 10px;
+		height:50px;
+	}
+
 	a{
 		text-decoration:none;
 		color:#000;
