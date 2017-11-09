@@ -1,27 +1,22 @@
 @import './main';
-
-
+#header{
+	display:grid;
+	grid-template-areas:
+		  "logo menu"
+		  "links links";
+}
 #logo{
 	text-align: center;
 	grid-area:logo;
 }
-#links{
-	grid-area:links;
-	display: flex;
-	justify-content:space-around;	
+#menu{
+	grid-area:menu;
 }
-
-#links a {
-	height:40px;
-	width:140px;
-	padding-top:20px;
-	text-align: center;
-	border-radius: 5%;
-}
-
 a{
 	text-decoration:none;
 	color:#000;
+	width:100%;
+
 }
 
 a:hover{
@@ -33,22 +28,39 @@ a:active{
 	color:#red;
 }
 
-
-
-@media (min-width:700px){
-	#header{
-		grid-template-areas:  
-		". . logo  . ."
-		" . links links links .";
-	display:grid;
-	}
-	#menu{
-	display:none;
+#links{
+	display: none;
+	//second row spans 2 columns
+  grid-column: 1/ span 2;
+  grid-row: 2/ 2;
+	text-align: center;
+	&.active{
+		display:grid;
 	}
 }
 
-@media (max-width:700px){
-	.hide{
-		display:none !important;
+@media (min-width:700px){
+	#header{
+		grid-template-areas:
+		  ". . logo  . ."
+		  " . links links links .";
 	}
+	#logo{
+		grid-area:logo;
+	}
+
+	#links{
+		grid-area:links;
+		display: flex;
+		justify-content:space-around;	
+	}
+
+	#links a {
+		height:40px;
+		width:140px;
+		padding-top:20px;
+		border-radius: 5%;
+	}
+
+  #menu{ display: none; }
 }

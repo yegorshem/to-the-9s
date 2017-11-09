@@ -17,7 +17,7 @@ class Header extends React.Component {
           <img src="" alt="To the Nine's logo"/> 
         </div>
         <img id="menu" onClick={this.toggleDropdown} src="" alt="menu"/>
-        <div id="links" className={(this.state.showMenu)? "" : "hide" }>
+        <div id="links" className={(this.state.showMenu)? "active" : "" }>
           <Link to='/'>Home</Link>
           <Link to ='/about'>About us</Link>
           <Link to='/reviews'>Reviews</Link>
