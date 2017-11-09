@@ -16,16 +16,15 @@ a{
 	text-decoration:none;
 	color:#000;
 	width:100%;
-
 }
 
 a:hover{
 	background-color: $grey;
 	color:$white;
 }
-a:active{
-	color:$darkgrey;
-	color:#red;
+a.active{
+	background-color:$darkgrey ;
+	color:$red ;
 }
 
 #links{

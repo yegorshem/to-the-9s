@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 class Header extends React.Component {
  constructor() {
@@ -18,11 +18,11 @@ class Header extends React.Component {
         </div>
         <img id="menu" onClick={this.toggleDropdown} src="" alt="menu"/>
         <div id="links" className={(this.state.showMenu)? "active" : "" }>
-          <Link to='/'>Home</Link>
-          <Link to ='/about'>About us</Link>
-          <Link to='/reviews'>Reviews</Link>
-          <Link to ='/events'>Events</Link>
-          <Link to='/reservation'>Reservation</Link>
+          <NavLink exact to='/' activeClassName="active">Home</NavLink>
+          <NavLink to ='/about' activeClassName="active">About us</NavLink>
+          <NavLink to='/reviews' activeClassName="active">Reviews</NavLink>
+          <NavLink to ='/events' activeClassName="active">Events</NavLink>
+          <NavLink to='/reservation' activeClassName="active">Reservation</NavLink>
         </div>
       </div>
     )   
