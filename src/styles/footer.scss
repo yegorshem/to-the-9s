@@ -1,0 +1,26 @@
+@import './main';
+#footer{
+	background-color: $darkgrey;
+	font-size: 20px;
+	padding: 10px;
+
+	.footText{
+		display:flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	span{
+		color:white;
+	}
+
+	@media (min-width:700px){
+		#footer{
+			font-size: 24px;
+		}
+		.footText{
+			flex-direction:row;
+			justify-content: space-evenly;
+			padding:10px;
+		}
+	}
+}

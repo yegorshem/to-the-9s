@@ -14,12 +14,11 @@ export default class App extends Component {
     return (
       <div>
         <Header/>
-        <Route exact path="/home" component={Home}/>
+        <Route exact path="/" component={Home}/>
         <Route path="/about" component={About} />
         <Route path="/reviews" component={Reviews} />
         <Route path="/events" component={Events} />
         <Route path="/reservation" component={Reservation} />
-  		
         <Footer/>
       </div>
     )

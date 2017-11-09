@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+const logo= require('../img/logo.jpg')
 
 class Header extends React.Component {
  constructor() {
@@ -14,7 +15,7 @@ class Header extends React.Component {
     return(
       <div id="header">
         <div id="logo">
-          <img src="" alt="To the Nine's logo"/> 
+          <img src={logo} alt="To the nines logo"/> 
         </div>
         <img id="menu" onClick={this.toggleDropdown} src="" alt="menu"/>
         <div id="links" className={(this.state.showMenu)? "active" : "" }>

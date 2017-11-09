@@ -2,64 +2,70 @@
 #header{
 	display:grid;
 	grid-template-areas:
-		  "logo menu"
+	  "logo menu"
 		  "links links";
-}
-#logo{
-	text-align: center;
-	grid-area:logo;
-}
-#menu{
-	grid-area:menu;
-}
-a{
-	text-decoration:none;
-	color:#000;
-	width:100%;
-}
-
-a:hover{
-	background-color: $grey;
-	color:$white;
-}
-a.active{
-	background-color:$darkgrey ;
-	color:$red ;
-}
-
-#links{
-	display: none;
-	//second row spans 2 columns
-  grid-column: 1/ span 2;
-  grid-row: 2/ 2;
-	text-align: center;
-	&.active{
-		display:grid;
+  padding-top: 5px	;
 	}
-}
-
-@media (min-width:700px){
-	#header{
-		grid-template-areas:
-		  ". . logo  . ."
-		  " . links links links .";
-	}
+	
 	#logo{
+		text-align: center;
 		grid-area:logo;
+		img{
+			width:200px;
+		}
+	}
+	#menu{
+		grid-area:menu;
+	}
+	a{
+		text-decoration:none;
+		color:#000;
+		width:100%;
+	}
+
+	a:hover{
+		background-color: $grey;
+		color:$white;
+	}
+	a.active{
+		background-color:$darkgrey ;
+		color:$red ;
 	}
 
 	#links{
-		grid-area:links;
-		display: flex;
-		justify-content:space-around;	
+		display: none;
+		//second row spans 2 columns
+	  grid-column: 1/ span 2;
+	  grid-row: 2/ 2;
+		text-align: center;
+		&.active{
+			display:grid;
+		}
 	}
 
-	#links a {
-		height:40px;
-		width:140px;
-		padding-top:20px;
-		border-radius: 5%;
-	}
+	@media (min-width:700px){
+		#header{
+			grid-template-areas:
+			  ". . logo  . ."
+			  " . links links links .";
+		}
+		#logo img{
+			height: 100px;
+	    width: 500px;
+		}
 
-  #menu{ display: none; }
-}
+		#links{
+			grid-area:links;
+			display: flex;
+			justify-content:space-around;	
+		}
+
+		#links a {
+			height:40px;
+			width:140px;
+			padding-top:20px;
+			border-radius: 5%;
+		}
+
+	  #menu{ display: none; }
+	}

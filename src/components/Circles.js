@@ -20,7 +20,12 @@ import {PieChart, Pie, Legend} from 'recharts';
 //  float:left;
 // }
 
-// const data01 = [{name: 'Group A', value: 100}];
+const circles = [
+	{name: '100%', value: 100},
+	{name: '100%', value: 100},
+	{name: '100%', value: 100},
+	{name: '100%', value: 100},
+];
 
 
 export const Circle =  ({circles}) =>{
@@ -33,7 +38,7 @@ export const Circle =  ({circles}) =>{
 
  
   return (
-    <div>
+    <div id="cirlces">
         {circles.map((circle)=>{renderCircles(circle)})}
     </div>
 );

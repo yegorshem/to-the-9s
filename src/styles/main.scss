@@ -4,6 +4,27 @@ $grey:#84889a;
 $ltgrey:#dddddf;
 $red:#D47474;
 $white:#F2F2F2;
+$fontf:Numans; 
+
 body{
 	background-color:$white; 
+	font-family: $fontf;
+	font-size: 24px;
+	margin:0;
+}
+.content{
+	 //off set of header plus size of footer 
+	  min-height: calc(100vh - 100px);
+}
+#blkText{
+	background-color: $grey;
+	p{
+		color:$white;
+		padding:5%;
+	}
+}
+@media (min-width:700px){
+	#blkText p{
+		padding:20px 250px;
+	}
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Reservation =()=>{
   return(
-      <div id="reservation">
+      <div id="reservation" className="content">
         <h2> Reservation </h2>
       </div>
   )
