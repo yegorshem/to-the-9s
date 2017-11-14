@@ -4,17 +4,17 @@ $grey:#84889a;
 $ltgrey:#dddddf;
 $red:#D47474;
 $white:#F2F2F2;
-$fontf:Numans; 
+$fontf:Numans;
 
 body{
-	background-color:$white; 
+	background-color:$white;
 	font-family: $fontf;
 	font-size: 24px;
 	margin:0;
 }
 .content{
-	 //off set of header plus size of footer 
-	  min-height: calc(100vh - 100px);
+	 //off set of header plus size of footer
+	  min-height: calc(100vh - 270px);
 }
 #blkText{
 	background-color: $grey;

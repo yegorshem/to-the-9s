@@ -6,7 +6,7 @@ import About from './About';
 import Reviews  from './Reviews';
 import Events from './Events';
 import Reservation from './Reservation';
-
+ 
 import { Route} from 'react-router-dom'
 
 export default class App extends Component {
@@ -15,6 +15,7 @@ export default class App extends Component {
       <div>
         <Header/>
         <Route exact path="/" component={Home}/>
+
         <Route path="/about" component={About} />
         <Route path="/reviews" component={Reviews} />
         <Route path="/events" component={Events} />
