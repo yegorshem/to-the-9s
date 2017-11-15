@@ -1,7 +1,11 @@
 @import './main';
 #header{
 	height:60px;
+	width:100%;
+	top:0;
 	padding-top: 5px;
+	position: fixed;
+	z-index: 666;	
 }
 
 #logo{
@@ -25,6 +29,13 @@ a.active{
 	background-color:$darkgrey ;
 	color:$red ;
 }
+
+a:hover:first-child{
+	background-color: $ltgrey;
+}
+a.active:first-child{
+	background-color: $white;
+}
 .open#menu {
 	background-color: $grey;
 	top:0;
@@ -35,8 +46,7 @@ a.active{
 }
 
 #links{
-	// display: none;
-	//second row spans 2 columns
+	display: none;
 	text-align: center;
 
 	&.active{
@@ -49,15 +59,19 @@ a.active{
 		#header{
 			display: grid;
 			grid-template-areas:
-			  ". . logo  . ."
-			  " . menu menu menu .";
-			  margin-bottom: 50px;
+			  " . logo menu menu menu .";
+			  margin-bottom: 120px;
+		}
+		#logo{
+			grid-area:logo; 
 		}
 		#logo img{
-			height: 100px;
-	    width: 500px;
-	  		}
-		#meny{
+			height: 80px;
+	    width: 250px;
+	    margin-top: -20px;
+
+		}
+		#menu{
 			grid-area:menu;
 		}
 		#links{
@@ -66,10 +80,10 @@ a.active{
 		}
 
 		#links a {
-			height:40px;
-			width:140px;
-			padding-top:20px;
-			border-radius: 5%;
+			height: 60px;
+	    width: 250px;
+	    padding-top: 25px;
+	    border-radius: 5%;
 		}
 		
 	#nav-icon{ display: none; }
@@ -99,7 +113,7 @@ a.active{
   position: absolute;
   height: 9px;
   width: 50%;
-  background: #d3531a;
+  background: $red;
   opacity: 1;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);

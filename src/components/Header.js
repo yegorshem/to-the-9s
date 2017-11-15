@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-const logo= require('../img/logo.jpg')
+
+const logo= require('../img/limologo.png')
 
 class Header extends React.Component {
  constructor() {
@@ -10,15 +11,17 @@ class Header extends React.Component {
   toggleDropdown = () =>{
     this.setState({menuOpen: !this.state.menuOpen});
   }
+  closeDropdown = () =>{
+    this.setState({menuOpen: false});
+  }
   render(){
     console.log(this.state.menuOpen)
     return(
+
       <div id="header">
-        <div id="logo">
-          <img src={logo} alt="To the nines logo"/> 
-        </div>
+     
         
-        <div id="menu" onClick={this.toggleDropdown} className={(this.state.menuOpen)? "open" : ""}>
+        <div id="menu" className={(this.state.menuOpen)? "open" : ""}>
           <div id="nav-icon" onClick={this.toggleDropdown} className={(this.state.menuOpen)? "open" : ""}>
             <span ></span>
             <span ></span>
@@ -27,8 +30,12 @@ class Header extends React.Component {
             <span ></span>
             <span ></span>
           </div>
-          <div id="links" className={(this.state.menuOpen)? "active" : "hidden" }>
-            <NavLink exact to='/' activeClassName="active">Home</NavLink>
+          <div id="links" onClick={this.closeDropdown} className={(this.state.menuOpen)? "active" : ""} >
+            <NavLink exact to='/' activeClassName="active">
+              <div id="logo">
+                <img src={logo} alt="To the nines logo"/> 
+              </div>
+            </NavLink>
             <NavLink to ='/about' activeClassName="active">About us</NavLink>
             <NavLink to='/reviews' activeClassName="active">Reviews</NavLink>
             <NavLink to ='/events' activeClassName="active">Events</NavLink>

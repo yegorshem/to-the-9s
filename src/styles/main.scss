@@ -15,6 +15,7 @@ body{
 .content{
 	 //off set of header plus size of footer
 	  min-height: calc(100vh - 270px);
+	  margin-top:80px;
 }
 #blkText{
 	background-color: $grey;
@@ -26,5 +27,8 @@ body{
 @media (min-width:700px){
 	#blkText p{
 		padding:20px 250px;
+	}
+	.content{
+	  margin-top:120px;
 	}
 }
