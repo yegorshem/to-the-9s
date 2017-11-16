@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const logo= require('../img/limologo.png')
+const logo= require('../img/logo.png')
 
 class Header extends React.Component {
  constructor() {
@@ -19,7 +19,9 @@ class Header extends React.Component {
     return(
 
       <div id="header">
-     
+        <div id="logo">
+          <img src={logo} alt="To the nines logo"/> 
+        </div>
         
         <div id="menu" className={(this.state.menuOpen)? "open" : ""}>
           <div id="nav-icon" onClick={this.toggleDropdown} className={(this.state.menuOpen)? "open" : ""}>
@@ -31,11 +33,7 @@ class Header extends React.Component {
             <span ></span>
           </div>
           <div id="links" onClick={this.closeDropdown} className={(this.state.menuOpen)? "active" : ""} >
-            <NavLink exact to='/' activeClassName="active">
-              <div id="logo">
-                <img src={logo} alt="To the nines logo"/> 
-              </div>
-            </NavLink>
+            <NavLink exact to='/' activeClassName="active">Home</NavLink>
             <NavLink to ='/about' activeClassName="active">About us</NavLink>
             <NavLink to='/reviews' activeClassName="active">Reviews</NavLink>
             <NavLink to ='/events' activeClassName="active">Events</NavLink>
