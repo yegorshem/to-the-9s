@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const logo= require('../img/logo.png')
+const logo= require('../img/logoNum.png')
 
 class Header extends React.Component {
  constructor() {
