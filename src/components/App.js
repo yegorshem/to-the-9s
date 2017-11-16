@@ -3,9 +3,8 @@ import Header from './Header'
 import Footer from './Footer'
 import Home from './Home';
 import About from './About';
-import Reviews  from './Reviews';
-import Events from './Events';
-import Reservation from './Reservation';
+import Services  from './Services';
+import Contact  from './Contact';
  
 import { Route} from 'react-router-dom'
 
@@ -15,11 +14,9 @@ export default class App extends Component {
       <div>
         <Header/>
         <Route exact path="/" component={Home}/>
-
         <Route path="/about" component={About} />
-        <Route path="/reviews" component={Reviews} />
-        <Route path="/events" component={Events} />
-        <Route path="/reservation" component={Reservation} />
+        <Route path="/services" component={Services} />
+        <Route path="/contact" component={Contact} />
         <Footer/>
       </div>
     )

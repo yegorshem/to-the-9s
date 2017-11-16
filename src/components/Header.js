@@ -20,7 +20,7 @@ class Header extends React.Component {
 
       <div id="header">
         <div id="logo">
-          <img src={logo} alt="To the nines logo"/> 
+           <img src={logo} alt="To the nines logo"/>
         </div>
         
         <div id="menu" className={(this.state.menuOpen)? "open" : ""}>
@@ -35,9 +35,8 @@ class Header extends React.Component {
           <div id="links" onClick={this.closeDropdown} className={(this.state.menuOpen)? "active" : ""} >
             <NavLink exact to='/' activeClassName="active">Home</NavLink>
             <NavLink to ='/about' activeClassName="active">About us</NavLink>
-            <NavLink to='/reviews' activeClassName="active">Reviews</NavLink>
-            <NavLink to ='/events' activeClassName="active">Events</NavLink>
-            <NavLink to='/reservation' activeClassName="active">Reservation</NavLink>
+            <NavLink to ='/services' activeClassName="active">Services</NavLink>
+            <NavLink to='/contact' activeClassName="active">Contact</NavLink>
           </div>
         </div>
       </div>

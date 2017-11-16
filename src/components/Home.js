@@ -1,5 +1,6 @@
 import React from 'react'
 import LimoCarousel from './LimoCarousel'
+import Reviews from './Reviews'
 
 const Home =()=>{
   return(
@@ -12,6 +13,7 @@ const Home =()=>{
       	<div className="blkCircles">
       	<div className="circle"><p>Starting At $109</p></div> <div className="circle"><p>No Hidden Costs</p></div> <div className="circle"><p>10 Passenger</p></div>
       	</div>
+        <Reviews/>
       </div>
   )
 

@@ -10,8 +10,7 @@ import './styles/footer.scss';
 import './styles/home.scss';
 import './styles/about.scss';
 import './styles/reviews.scss';
-import './styles/events.scss';
-import './styles/reservation.scss';
+import './styles/contact.scss';
 import './styles/carousel.scss';
 
 import registerServiceWorker from './registerServiceWorker';
